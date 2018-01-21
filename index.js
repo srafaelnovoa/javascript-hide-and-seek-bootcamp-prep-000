@@ -55,5 +55,5 @@ function deepestChild() {
     current.push(next.shift())
     console.log(" ")
   }
-    return deepestNode
+    return deepestNode[0]
 }
