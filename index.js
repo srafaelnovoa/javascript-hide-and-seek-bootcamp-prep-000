@@ -40,6 +40,7 @@ function deepestChild() {
     
     NodeList.prototype.forEach = Array.prototype.forEach
     let tmp = Object.create(current[0])
+    console.log(`tmp : ${tmp },`)
     children = tmp.childNodes
     console.log(`children : ${children},`)
     for (let i = 0; i < children.length; i++){
