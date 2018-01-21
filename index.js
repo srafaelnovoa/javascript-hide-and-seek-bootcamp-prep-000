@@ -30,7 +30,6 @@ function deepestChild() {
   current.push( document.querySelector('#grand-node') )
   var iLoop = 0, iLevelCurrent = 0, iLevelMax = 0 
   var deepestNode = current[0]
-  var tmp
   var children
   console.log(`deepestNode : ${deepestNode }`)
   while (current && iLoop <10) 
