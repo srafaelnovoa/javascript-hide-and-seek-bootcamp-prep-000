@@ -37,9 +37,9 @@ function deepestChild() {
     console.log(`iLoop : ${iLoop }, current: ${current}, next: ${next}`)
     iLoop++
     currentNode = current.shift()
-    console.log(`currentNode : ${currentNode},`)
+    //console.log(`currentNode : ${currentNode},`)
     children = currentNode.childNodes
-    console.log(`children : ${children},`)
+    //console.log(`children : ${children},`)
     boolChildFound = 0
     for (let i = 0; i < children.length; i++){
       
@@ -47,6 +47,7 @@ function deepestChild() {
 
       //console.log(`children[${i}].nodeName : ${children[i].nodeName },`)
       next.push(children[i])
+      deepestNode = children[i]
       }
       
     }
@@ -54,5 +55,5 @@ function deepestChild() {
     current.push(next.shift())
     console.log(" ")
   }
-    return currentNode
+    return deepestNode
 }
