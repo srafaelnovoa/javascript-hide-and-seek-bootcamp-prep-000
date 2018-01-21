@@ -39,7 +39,7 @@ function deepestChild() {
     iLoop++
     
     NodeList.prototype.forEach = Array.prototype.forEach
-    tmp = Object.create(current[0])
+    let tmp = Object.create(current[0])
     children = tmp.childNodes
     console.log(`children : ${children},`)
     for (let i = 0; i < children.length; i++){
