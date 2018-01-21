@@ -38,9 +38,9 @@ function deepestChild() {
     iLoop++
     
     NodeList.prototype.forEach = Array.prototype.forEach
-    let tmp = Object.create(current[0])
-    console.log(`tmp : ${tmp },`)
-    children = tmp.childNodes
+
+
+    children = current[0].childNodes
     console.log(`children : ${children},`)
     for (let i = 0; i < children.length; i++){
       if(children[i].nodeName ==="DIV"){
