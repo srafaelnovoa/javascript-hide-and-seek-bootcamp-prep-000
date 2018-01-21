@@ -40,7 +40,6 @@ function deepestChild() {
     //console.log(`currentNode : ${currentNode},`)
     children = currentNode.childNodes
     //console.log(`children : ${children},`)
-    boolChildFound = 0
     for (let i = 0; i < children.length; i++){
       
       if(children[i].nodeName ==="DIV"){
@@ -55,5 +54,5 @@ function deepestChild() {
     current.push(next.shift())
     console.log(" ")
   }
-    return deepestNode[0]
+    return deepestNode
 }
