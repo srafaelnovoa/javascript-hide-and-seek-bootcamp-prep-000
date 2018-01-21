@@ -32,7 +32,7 @@ function deepestChild() {
   var deepestNode = current[0]
   var children, currentNode
   console.log(`deepestNode : ${deepestNode }`)
-  while (current && iLoop <10) 
+  while (current && iLoop <100) 
   {
     console.log(`iLoop : ${iLoop }, iLevelCurrent : ${iLevelCurrent }, iLevelMax : ${iLevelMax }, current: ${current}, next: ${next}`)
     iLoop++
@@ -41,6 +41,7 @@ function deepestChild() {
     children = currentNode.childNodes
     console.log(`children : ${children},`)
     for (let i = 0; i < children.length; i++){
+      iLevelCurrent++
       if(children[i].nodeName ==="DIV"){
       console.log(`children[${i}].nodeName : ${children[i].nodeName },`)
       next.push(children[i])
