@@ -30,17 +30,16 @@ function deepestChild() {
   current.push( document.querySelector('#grand-node') )
   var iLoop = 0, iLevelCurrent = 0, iLevelMax = 0 
   var deepestNode = current[0]
+  var currentNode
   var children
   console.log(`deepestNode : ${deepestNode }`)
   while (current && iLoop <10) 
   {
     console.log(`iLoop : ${iLoop }, iLevelCurrent : ${iLevelCurrent }, iLevelMax : ${iLevelMax }, current: ${current}, next: ${next}`)
     iLoop++
-    
-    NodeList.prototype.forEach = Array.prototype.forEach
-
-
-    children = current[0].childNodes
+    currentNode = current.shift()
+    console.log(`currentNode : ${currentNode},`)
+    children = currentNode.childNodes
     console.log(`children : ${children},`)
     for (let i = 0; i < children.length; i++){
       if(children[i].nodeName ==="DIV"){
