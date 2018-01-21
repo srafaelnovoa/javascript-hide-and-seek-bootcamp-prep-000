@@ -32,7 +32,7 @@ function deepestChild() {
   var deepestNode = current[0]
   var children, currentNode
   console.log(`deepestNode : ${deepestNode }`)
-  while (current && iLoop <100 && current[0]] ) 
+  while (current && iLoop <100 && current[0] ) 
   {
     console.log(`iLoop : ${iLoop }, current: ${current}, next: ${next}`)
     iLoop++
